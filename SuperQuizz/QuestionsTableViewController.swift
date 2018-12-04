@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionsTableViewController: UITableViewController {
-
+ var questions: [Question] = [Question("Premiere Question",1), Question("Deuxieme Question",4), Question("Troisieme Question",1)]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,16 +30,24 @@ class QuestionsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 6
+        return questions.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionTableViewCell", for: indexPath) as! QuestionTableViewCell
-
         
-
+        cell.questionTitleLabel.text = questions[indexPath.row].title
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AnswerViewController") as! AnswerViewController
+        vc.question = questions[indexPath.row]
+        show(vc, sender: self)
+        
     }
     
 

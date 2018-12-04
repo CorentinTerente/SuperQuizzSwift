@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAW-vR-0jf">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAW-vR-0jf">
                         <rect key="frame" x="16" y="12" width="288" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -27,11 +27,16 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="QAW-vR-0jf" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="IIa-2t-yhK"/>
                     <constraint firstItem="QAW-vR-0jf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="J9e-bO-eWg"/>
+                    <constraint firstItem="QAW-vR-0jf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="aw3-yQ-uQG"/>
                     <constraint firstAttribute="trailingMargin" secondItem="QAW-vR-0jf" secondAttribute="trailing" id="zfG-cj-72T"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="questionTitleLabel" destination="QAW-vR-0jf" id="z0h-Ts-X5y"/>
+            </connections>
             <point key="canvasLocation" x="6" y="83"/>
         </tableViewCell>
     </objects>
