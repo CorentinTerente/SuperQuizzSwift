@@ -35,6 +35,14 @@ class QuestionsTableViewController: UITableViewController {
         
         cell.questionTitleLabel.text = questions[indexPath.row].title
         
+        if questions[indexPath.row].userChoice != nil {
+            if questions[indexPath.row].verifyAnswer() {
+                cell.backgroundColor = UIColor.green
+            } else {
+                cell.backgroundColor = UIColor.red
+            }
+        }
+        
         return cell
     }
     
@@ -65,6 +73,7 @@ class QuestionsTableViewController: UITableViewController {
             self.questions[indexPath.row] = questionAnswered
             
             self.navigationController?.popViewController(animated: true)
+            self.tableView.reloadData()
     
         })
         
