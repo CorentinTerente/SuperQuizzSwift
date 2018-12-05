@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SuperQuizz/UI/ViewControllers/QuestionsTableViewController.swift"
-            timestampString = "565713778.64947"
+            timestampString = "565716185.556006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SuperQuizz/UI/ViewControllers/QuestionsTableViewController.swift"
-            timestampString = "565713778.649539"
+            timestampString = "565716185.5560811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "userDidCreateQuestion(q:)"
             landmarkType = "7">
          </BreakpointContent>

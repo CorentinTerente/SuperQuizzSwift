@@ -36,11 +36,14 @@ class CreateOrEditQuestionViewController: UIViewController {
         if let question = questionToEdit {
             createOrEditButtun.setTitle("Edit", for: .normal)
             
+            guard let validPropositions = question.propositions else {
+                return
+            }
             questionTitleTextField.text = question.title
-            proposition1TextField.text = question.propositions[0]
-            proposition2TextField.text = question.propositions[1]
-            proposition3TextField.text = question.propositions[2]
-            proposition4TextField.text = question.propositions[3]
+            proposition1TextField.text = validPropositions[0]
+            proposition2TextField.text = validPropositions[1]
+            proposition3TextField.text = validPropositions[2]
+            proposition4TextField.text = validPropositions[3]
             
             switch question.correctAnswer {
                 case 0:
@@ -67,11 +70,12 @@ class CreateOrEditQuestionViewController: UIViewController {
     
     func createOrEditQuestion () {
         if let question = questionToEdit {
+            
             question.title = questionTitleTextField.text!
-            question.propositions[0] = proposition1TextField.text!
-            question.propositions[1] = proposition2TextField.text!
-            question.propositions[2] = proposition3TextField.text!
-            question.propositions[3] = proposition4TextField.text!
+            question.propositions?[0] = proposition1TextField.text!
+            question.propositions?[1] = proposition2TextField.text!
+            question.propositions?[2] = proposition3TextField.text!
+            question.propositions?[3] = proposition4TextField.text!
             
             if correctAnswer1Switch.isOn {
                 question.correctAnswer = 0
@@ -119,10 +123,7 @@ class CreateOrEditQuestionViewController: UIViewController {
                 correctAnswer = 3
             }
             let question = Question(questionTitle, correctAnswer)
-            question.propositions[0] = proposition1
-            question.propositions[1] = proposition2
-            question.propositions[2] = proposition3
-            question.propositions[3] = proposition4
+            question.propositions = [proposition1, proposition2, proposition3, proposition4]
             
             delegate?.userDidCreateQuestion(q: question)
         }

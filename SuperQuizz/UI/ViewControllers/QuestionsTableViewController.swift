@@ -9,7 +9,7 @@
 import UIKit
 
 class QuestionsTableViewController: UITableViewController {
- var questions: [Question] = [Question("Premiere Question",0), Question("Deuxieme Question",3), Question("Troisieme Question",0)]
+ var questions: [Question] = [Question("Premiere Question",0,0), Question("Deuxieme Question",3,1), Question("Troisieme Question",0,2)]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,16 +41,17 @@ class QuestionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexpath) in
-            //TODO: edit question
+           
             let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CreateOrEditQuestionViewController") as! CreateOrEditQuestionViewController
             controller.delegate = self
-            //controller.questionToEdit
+            controller.questionToEdit = self.questions[indexPath.row]
             self.present(controller, animated: true, completion: nil)
             
         }
         
         let deleteAction = UITableViewRowAction(style: .destructive, title: "delete") { (action, indexpath) in
-            //TODO: delete question
+            self.questions.remove(at: indexPath.row)
+            tableView.reloadData()
         }
         return [editAction,deleteAction]
     }
@@ -82,13 +83,21 @@ class QuestionsTableViewController: UITableViewController {
 }
 extension QuestionsTableViewController : CreateOrEditQuestionDelegate {
     func userDidEditQuestion(q: Question) {
-        // TODO: Maj de la question
+        for question in questions {
+            if question.id == q.id {
+                questions.remove(at: question.id ?? 0)
+                questions.append(q)
+            }
+        }
         self.presentedViewController?.dismiss(animated: true, completion: nil)
+        tableView.reloadData()
     }
     
     func userDidCreateQuestion(q: Question) {
+        q.id = questions.count
         questions.append(q)
         self.presentedViewController?.dismiss(animated: true, completion: nil)
+        tableView.reloadData()
     }
     
 }

@@ -30,10 +30,10 @@ class AnswerViewController: UIViewController {
         
         questionTitleLabel.text = question.title
         
-        answerButton1.setTitle(question.propositions[0], for: .normal)
-        answerButton2.setTitle(question.propositions[1], for: .normal)
-        answerButton3.setTitle(question.propositions[2], for: .normal)
-        answerButton4.setTitle(question.propositions[3], for: .normal)
+        answerButton1.setTitle(question.propositions?[0], for: .normal)
+        answerButton2.setTitle(question.propositions?[1], for: .normal)
+        answerButton3.setTitle(question.propositions?[2], for: .normal)
+        answerButton4.setTitle(question.propositions?[3], for: .normal)
         
       
     }
