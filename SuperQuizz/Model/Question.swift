@@ -11,8 +11,8 @@ import Foundation
 class Question {
     var title: String
     var correctAnswer: Int
-    var propositions: [String]?
-    var userChoice: Int?
+    var propositions: [String]
+    var userChoice: String?
     
     init(_ title: String, _ correctAnswer: Int) {
         self.title = title
@@ -20,7 +20,8 @@ class Question {
         self.correctAnswer = correctAnswer
     }
     
+    
     func verifyAnswer() -> Bool{
-        return self.userChoice == self.correctAnswer
+        return self.userChoice == self.propositions[correctAnswer]
     }
 }
