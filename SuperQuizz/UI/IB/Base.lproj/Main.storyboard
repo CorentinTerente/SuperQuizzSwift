@@ -109,12 +109,18 @@
                                     <constraint firstAttribute="width" secondItem="nXj-mc-D3o" secondAttribute="height" id="HPW-t3-8AN"/>
                                 </constraints>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vfg-PZ-IfE">
+                                <rect key="frame" x="41" y="40" width="238" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vfg-PZ-IfE" firstAttribute="top" secondItem="ffs-MW-Ka0" secondAttribute="top" constant="20" id="3O3-rI-9TN"/>
                             <constraint firstItem="ffs-MW-Ka0" firstAttribute="trailing" secondItem="Fg8-GT-ejZ" secondAttribute="trailing" constant="5" id="7eB-PD-H0I"/>
                             <constraint firstItem="Fg8-GT-ejZ" firstAttribute="leading" secondItem="ffs-MW-Ka0" secondAttribute="leading" constant="5" id="Dg3-fl-Ys6"/>
+                            <constraint firstItem="vfg-PZ-IfE" firstAttribute="leading" secondItem="rel-vr-7YM" secondAttribute="leadingMargin" constant="25" id="NP8-Cc-wM1"/>
                             <constraint firstItem="ffs-MW-Ka0" firstAttribute="bottom" secondItem="nXj-mc-D3o" secondAttribute="bottom" constant="5" id="kjm-WW-OFo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vfg-PZ-IfE" secondAttribute="trailing" constant="25" id="n7M-FT-vgW"/>
                             <constraint firstItem="nXj-mc-D3o" firstAttribute="top" secondItem="Fg8-GT-ejZ" secondAttribute="bottom" constant="40" id="pXg-Ak-PCu"/>
                             <constraint firstItem="ffs-MW-Ka0" firstAttribute="trailing" secondItem="nXj-mc-D3o" secondAttribute="trailing" constant="5" id="rMG-H5-rz1"/>
                             <constraint firstItem="nXj-mc-D3o" firstAttribute="leading" secondItem="ffs-MW-Ka0" secondAttribute="leading" constant="5" id="wJd-GI-Fc6"/>
@@ -127,6 +133,7 @@
                         <outlet property="answerButton3" destination="xN9-pm-JAb" id="3KY-25-MRv"/>
                         <outlet property="answerButton4" destination="Kib-zN-DZF" id="VOb-fi-Spu"/>
                         <outlet property="questionTitleLabel" destination="Fg8-GT-ejZ" id="Uss-4d-yY5"/>
+                        <outlet property="timerProgressBar" destination="vfg-PZ-IfE" id="PeG-re-AS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dl5-qx-Vph" userLabel="First Responder" sceneMemberID="firstResponder"/>

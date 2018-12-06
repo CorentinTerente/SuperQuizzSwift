@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C4872F721B9374A00FAC4B3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C4872F621B9374A00FAC4B3 /* APIClient.swift */; };
 		5C60D64121B7CF3D00F35F67 /* CreateOrEditQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C60D64021B7CF3D00F35F67 /* CreateOrEditQuestionViewController.swift */; };
 		5CE6637821B6B5C4002898B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE6637721B6B5C4002898B5 /* AppDelegate.swift */; };
 		5CE6637A21B6B5C4002898B5 /* AnwserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CE6637921B6B5C4002898B5 /* AnwserViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C4872F621B9374A00FAC4B3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		5C60D64021B7CF3D00F35F67 /* CreateOrEditQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrEditQuestionViewController.swift; sourceTree = "<group>"; };
 		5CE6637421B6B5C4002898B5 /* SuperQuizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperQuizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE6637721B6B5C4002898B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C4872F521B9372B00FAC4B3 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5C4872F621B9374A00FAC4B3 /* APIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		5C60D64221B7CF4C00F35F67 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +163,7 @@
 		5CE6637621B6B5C4002898B5 /* SuperQuizz */ = {
 			isa = PBXGroup;
 			children = (
+				5C4872F521B9372B00FAC4B3 /* API */,
 				5C60D64621B7CFA800F35F67 /* Model */,
 				5C60D64221B7CF4C00F35F67 /* UI */,
 				5CE6637721B6B5C4002898B5 /* AppDelegate.swift */,
@@ -316,6 +327,7 @@
 				5CE6637A21B6B5C4002898B5 /* AnwserViewController.swift in Sources */,
 				5CE663A921B6C0F2002898B5 /* QuestionTableViewCell.swift in Sources */,
 				5CE663A621B6B769002898B5 /* QuestionsTableViewController.swift in Sources */,
+				5C4872F721B9374A00FAC4B3 /* APIClient.swift in Sources */,
 				5CE6637821B6B5C4002898B5 /* AppDelegate.swift in Sources */,
 				5C60D64121B7CF3D00F35F67 /* CreateOrEditQuestionViewController.swift in Sources */,
 			);

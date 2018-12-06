@@ -111,16 +111,16 @@ class CreateOrEditQuestionViewController: UIViewController {
             var correctAnswer: Int = 0
             
             if correctAnswer1Switch.isOn {
-                correctAnswer = 0
-                
-            } else if correctAnswer2Switch.isOn {
                 correctAnswer = 1
                 
-            } else if correctAnswer3Switch.isOn {
+            } else if correctAnswer2Switch.isOn {
                 correctAnswer = 2
                 
-            } else if correctAnswer4Switch.isOn {
+            } else if correctAnswer3Switch.isOn {
                 correctAnswer = 3
+                
+            } else if correctAnswer4Switch.isOn {
+                correctAnswer = 4
             }
             let question = Question(questionTitle, correctAnswer)
             question.propositions = [proposition1, proposition2, proposition3, proposition4]

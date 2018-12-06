@@ -28,10 +28,11 @@ class Question {
     }
     
     
+    
     func verifyAnswer() -> Bool{
         guard let validPropositions = self.propositions else {
             return false
         }
-        return self.userChoice == validPropositions[correctAnswer]
+        return self.userChoice == validPropositions[correctAnswer - 1]
     }
 }
