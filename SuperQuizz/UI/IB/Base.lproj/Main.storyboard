@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Super Quizz-->
         <scene sceneID="keE-at-afu">
             <objects>
                 <tableViewController id="MqB-bh-gcX" customClass="QuestionsTableViewController" customModule="SuperQuizz" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,8 +33,9 @@
                             <outlet property="delegate" destination="MqB-bh-gcX" id="woW-LW-ebt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rsq-WX-LUz">
+                    <navigationItem key="navigationItem" title="Super Quizz" id="rsq-WX-LUz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="vEb-Sg-1b9">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="beo-nI-bDQ" kind="presentation" identifier="showCreateOrEditViewController" id="h9X-VI-UIF"/>
                             </connections>
@@ -67,16 +68,20 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6au-UK-vxN">
                                                 <rect key="frame" x="0.0" y="0.0" width="152.5" height="152.5"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
+                                                <color key="backgroundColor" red="0.92941176470588238" green="0.0" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonTapped:" destination="bCM-eM-JIy" eventType="touchUpInside" id="sFo-kw-1f9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3a-fJ-SI8">
                                                 <rect key="frame" x="157.5" y="0.0" width="152.5" height="152.5"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
+                                                <color key="backgroundColor" red="1" green="0.36078431372549019" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonTapped:" destination="bCM-eM-JIy" eventType="touchUpInside" id="NzX-v9-08l"/>
                                                 </connections>
@@ -88,16 +93,20 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xN9-pm-JAb">
                                                 <rect key="frame" x="0.0" y="0.0" width="152.5" height="152.5"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
+                                                <color key="backgroundColor" red="0.0" green="0.65490196078431373" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonTapped:" destination="bCM-eM-JIy" eventType="touchUpInside" id="YPu-Gh-Uh6"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kib-zN-DZF">
                                                 <rect key="frame" x="157.5" y="0.0" width="152.5" height="152.5"/>
-                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Button"/>
+                                                <color key="backgroundColor" red="0.28235294117647058" green="0.8666666666666667" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="answerButtonTapped:" destination="bCM-eM-JIy" eventType="touchUpInside" id="N7k-jW-Pfj"/>
                                                 </connections>
@@ -156,6 +165,7 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X25-ea-dIq">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.0" green="0.42745098040000001" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="onSwitchTapped:" destination="beo-nI-bDQ" eventType="touchUpInside" id="wrg-jo-kUJ"/>
                                                 </connections>
@@ -229,8 +239,10 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqd-L9-Lwb">
                                 <rect key="frame" x="259" y="20" width="46" height="30"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.0" green="0.65490196078431373" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="onButtonCreateOrEditTapped:" destination="beo-nI-bDQ" eventType="touchUpInside" id="4qz-2l-w38"/>
                                 </connections>
@@ -274,6 +286,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X73-Xt-Kx9">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.92941176469999998" green="0.0" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="MqB-bh-gcX" kind="relationship" relationship="rootViewController" id="7ge-5b-hGh"/>

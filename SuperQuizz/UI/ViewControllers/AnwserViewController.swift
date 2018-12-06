@@ -41,6 +41,7 @@ class AnswerViewController: UIViewController {
         answerButton2.setTitle(question.propositions?[1], for: .normal)
         answerButton3.setTitle(question.propositions?[2], for: .normal)
         answerButton4.setTitle(question.propositions?[3], for: .normal)
+    
         
       
     }
