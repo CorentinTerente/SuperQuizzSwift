@@ -143,4 +143,8 @@ class CreateOrEditQuestionViewController: UIViewController {
         self.createOrEditQuestion()
     }
     
+    @IBAction func onBackButtonTapped(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 }
